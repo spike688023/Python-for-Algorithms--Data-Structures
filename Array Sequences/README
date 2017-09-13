@@ -1,0 +1,16 @@
+
+好奇 list vs tuple:
+Tuples are fixed size in nature whereas lists are dynamic.
+In other words, a tuple is immutable whereas a list is mutable.
+
+You can't add elements to a tuple. Tuples have no append or extend method.
+You can't remove elements from a tuple. Tuples have no remove or pop method.
+You can find elements in a tuple, since this doesn’t change the tuple.
+You can also use the in operator to check if an element exists in the tuple
+
+
+list,tuple, and string objects are "sequence" type object classes available in Python.
+
+The main commonaility between these object types is the ability to index to access individual elements in the sequence.
+
+

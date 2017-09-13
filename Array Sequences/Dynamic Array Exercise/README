@@ -1,0 +1,52 @@
+private method, 可以用單底線開頭, 去定義它.
+
+是用來告訴你, 它是private , 但實際上還是可以從外面呼叫它, 
+
+但定義上來說, 確實是叫private , 
+
+但執行上確怪怪的.
+
+
+>>> import test
+Use Tab to see me!
+>>> m = test.M()
+>>> dir(m)
+['_M__private', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'public']
+>>> m._M__private
+<bound method M.__private of <test.M object at 0x7fa61b6b0a10>>
+>>> m._M__private()
+You won't be able to Tab to see me!
+
+可以看test2.py來幫助理解.
+
+
+python 沒有真正的 private, 以單底線開頭是"慣例"
+告訴別人這個 function 理論上"不應該"被外面的 call
+但實際上你硬要去 call 是可以的
+雙底線開頭，不含同時雙底線開頭結尾，是 class 繼承 
+時，為了避免被 override 時使用， python 會替你改名 
+成 _ClassName__MethodName 以避免被覆蓋 
+所以表面上看起來外面 call 不到，實際上用改完後的名 
+字還是可以 
+了解  謝謝樓上^^ 
+用 _開頭命名,是告訴使用者你不該從外面call 
+而不是限制使用者不能從外面call
+
+以我上面test.py的例子來看, 
+
+_M__private() 就是被改後的名字, 不想被overwrite
+
+
+
+Dynamic Array Implementation:
+
+這塊主要是要實作,動態,  動態是指像list中的append功能, 
+
+大小能任意變動.
+
+ctypes - create and manipulate C data types in Python
+
+Reference:
+https://stackoverflow.com/questions/70528/why-are-pythons-private-methods-not-actually-private
+https://www.ptt.cc/bbs/Python/M.1368975673.A.AC5.html
+http://note.drx.tw/2015/01/google-python-style-callname-rules-main.html
