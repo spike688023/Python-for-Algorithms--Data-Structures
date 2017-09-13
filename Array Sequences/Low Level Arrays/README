@@ -1,0 +1,26 @@
+這章從底層bit byte memory介紹起， low level memory
+
+我覺得 不錯。
+
+1.  每個memory address 對應一個byte , 而memroy address的大小，
+    就取決是32或64的定址。
+
+2. 這裡以unicode 字元的array為例， unicode每個字元是以16 bits存的，
+   而array又是連續的空間， 也就是一個字元要吃掉2 bytes ，二個記憶體位址去存。
+
+   0xFFFF FFFF   32位元定址 ， 每個F 是16進制， 0 ~ 15 ，要2的四次方，
+                 就是4 個bits。
+
+   這裡用後面四個 16進來表達就好，  不然太長了。
+
+     0x2456 0x2457  0x2458  0x2459  0x245A 0x245B
+  CHAR     S              A               M
+  Index    0              1               2
+
+  formula  = Start + (cell size) * index
+  start = 0x2456
+  cell size = 2  bytes
+
+  這裡的index 以 2 為例，
+  0x2456 + 2 * 2 = 0x245A  這裡也就 可以說明，為什麼 array的存跟取，
+  只要O(1), 因為只要給 index 就能快速算出字元的位置。
