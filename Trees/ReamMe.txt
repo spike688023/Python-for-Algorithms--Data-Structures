@@ -1,0 +1,15 @@
+Tree 要多花點時間練習
+
+以下就列出，Tree要練習時，一步步的Example有什麼
+
+Tree
+    Implement by list
+    Implement by Nodes and References
+    Tree Traversals 
+        preorder
+        inorder
+        postorder
+    Binary Heap
+        Min Binary Heap
+        Max Binary Heap
+    Binary Search Tree
