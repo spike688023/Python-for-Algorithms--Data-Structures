@@ -41,7 +41,21 @@ print "BFS : " + str( BFS(graph, 'A') )
 
 """
 DFS , 會用到 yield
-DFS停的點在那裡?
+DFS停的點在那裡?  找到 goal的時侯，
+
+即便我的寫法是錯的，yield也要有回傳一些路徑才對丫。
+
+喔，它媽的，我知道，
+
+首先，我沒有用while去判斷stack內是否有東西，
+
+整個func內，只有一個for loop，所以這個loop，
+
+沒有跑到，我們要的end， 所以沒有東西return，
+
+即便我code裡面有寫要return的行。
+
+所以，我改成要到b ，就 會有東西了
 """
 graph2 = {'A': set(['B', 'C']),
          'B': set(['A', 'D', 'E']),
@@ -53,15 +67,14 @@ graph2 = {'A': set(['B', 'C']),
 def DFS(graph2, start, end):
     path, stack = [start], [start]
     visited = set(start)
-
+    print path
     vertex = stack.pop() 
     for i in graph2[vertex] - visited:
-        if i is end: 
-            path.append(i)
-            yield path
+        if i == end: 
+            yield path + [i]
         else:
             stack.append(i)   
             visited.add(i)
             path.append(i)
 
-print "DFS : " + str(  DFS(graph2, 'A', 'F')  )
+print list(  DFS(graph2, 'A', 'B')  )
