@@ -28,6 +28,7 @@ def finder(arr1,arr2):
 
 def finder3(arr1, arr2):
     result=0
+    # 這裡的arr1 + arr2 只是把二個list給串起來而已
     print(arr1+arr2)
     # Perform an XOR between the numbers in the arrays
     # 這個解  的概念是，相同的值之間做XOR , 出來是0
