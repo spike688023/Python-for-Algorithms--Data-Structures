@@ -1,0 +1,9 @@
+
+以下是個後端程式設計師的面試心得：
+
+https://medium.com/@hothero/2017-%E5%BE%8C%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E9%9D%A2%E8%A9%A6%E4%BB%A5%E5%8F%8A%E6%BA%96%E5%82%99%E7%B6%93%E9%A9%97-5e6083ef350
+
+裡面有題到一些，不錯可以參考的網站：
+
+http://highscalability.com/start-here/
+https://www.hiredintech.com/
