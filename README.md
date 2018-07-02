@@ -27,3 +27,10 @@ ctrl + Enter 就 是執 行 那段 code
 都是為了方便，以及使用緑高，所以才實做出來，會用之餘，
 
 還要能懂怎麼用array 去實作出來。
+
+
+start Server:
+jupyter-notebook --allow-root --ip=0.0.0.0 --port=9487
+
+Stop:
+jupyter-notebook stop 9487
